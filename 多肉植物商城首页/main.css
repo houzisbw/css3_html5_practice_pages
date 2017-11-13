@@ -1,0 +1,118 @@
+*{
+    margin:0;
+    padding:0;
+}
+.clear{
+    zoom:1;
+}
+.clear:after{
+    content:'';
+    display: block;
+    clear:both;
+}
+body {
+    background-color: aliceblue;
+}
+header{
+    width:1176px;
+    height:432px;
+    margin:0 auto;
+}
+.container{
+    width:882px;
+    margin:0 auto;
+}
+.title{
+    margin:50px auto;
+    width:200px;
+    height:50px;
+    background-color: #AAE6DA;
+    border-radius: 50px;
+    color:#fff;
+    font-size:23px;
+    text-align: center;
+    line-height: 50px;
+    border:6px solid #ffffff;
+}
+.title:hover{
+    /*四周阴影前2个值是0即可*/
+    box-shadow: 0 0 15px #AAA;
+}
+.pic{
+    border: 1px solid #AAAAAA;
+    margin-bottom:20px;
+}
+.each-pic {
+    margin: 10px;
+    width:200px;
+    height:200px;
+    float:left;
+    position: relative;
+    /*隐藏掉before和after伪元素*/
+    overflow: hidden;
+}
+.each-pic:before{
+    /*必须添加content为空才能显示样式*/
+    content:'';
+    width:100px;
+    height:100px;
+    background-color: red;
+    position: absolute;
+    left:-100px;
+    top:-100px;
+
+}
+.overlay{
+    position: absolute;
+    width:200px;
+    top:40px;
+    background-color: rgba(0,0,0,0.3);
+    /*动画效果写在一起可以同时执行*/
+    transform: rotate(55deg) scale(0.5,0.5);
+    transition:  all 0.5s;
+    height:0;
+    /*重要：在高度为0时要隐藏掉子元素*/
+    overflow: hidden;
+}
+.each-pic:hover .overlay{
+    height:120px;
+    transform: rotate(0deg) scale(1,1);
+}
+
+.word{
+    width:842px;
+    background-color: #AAE6DA;
+    font-family: 'STXingkai';
+    font-size:18px;
+    color:#fff;
+    text-indent: 2em;
+    padding:20px;
+    line-height: 30px;
+}
+.bigWord{
+    margin-top: 50px;
+    font-family: 'STXingkai';
+    font-size:30px;
+    color:#AAE6DA;
+    text-align: center;
+}
+footer{
+    height:100px;
+    margin-top: 50px;
+    font-size: 16px;
+    text-align: center;
+}
+.upper-title{
+    text-align: center;
+    color:#fff;
+    font-size: 20px;
+    border-bottom: 2px solid #AAE6DA;
+    height:50px;
+    line-height: 50px;
+}
+.lower-desc{
+    color:#fff;
+    text-align: center;
+    height:70px;
+    padding-top: 10px;
+}
