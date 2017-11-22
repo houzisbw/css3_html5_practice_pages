@@ -1,4 +1,5 @@
 //原理：一张模糊的img标签放在下面，canvas放在img上面，通过clip裁剪，只在canvas的指定位置上画图，达到消去模糊的效果
+//模糊通过filter:blur(20px)实现
 var canvas = document.getElementById('canvas');
 var cxt = canvas.getContext('2d');
 //加载图片
