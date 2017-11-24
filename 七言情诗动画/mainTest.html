@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>发红包看照片</title>
+    <link rel="stylesheet" href="test.css" type="text/css">
+</head>
+<body>
+<!--可以看到的部分-->
+<div class="container">
+    <!--里面包含3个图的div，宽度为父容器的3倍,由于父容器overflow:hidden,所以只能看到第一张图-->
+    <div class="wrap">
+        <!--这些div左浮动-->
+        <div class="bg1">
+            <!--太阳-->
+            <div class="sun">
+            </div>
+            <!--云朵-->
+            <div class="cloud">
+            </div>
+        </div>
+        <div class="bg2">
+            <!--门-->
+            <div class="door">
+                <div class="door_left">
+                </div>
+                <div class="door_right">
+                </div>
+            </div>
+        </div>
+        <div class="bg3">
+        </div>
+    </div>
+    <!--小男孩-->
+    <div class="boy">
+    </div>
+</div>
+
+<script src="./jquery-2.1.1.min.js"></script>
+<script src="./js.transit.js"></script>
+<script src="./test.js"></script>
+</body>
+</html>

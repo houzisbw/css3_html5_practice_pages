@@ -1,0 +1,177 @@
+*{
+    margin:0;
+    padding:0;
+}
+.clear{
+    zoom:1;
+}
+/*重要，设置上一级的宽高，不会出现滚动条*/
+html,body{
+    height:100%;
+    width:100%;
+}
+body{
+    background-color: #eee;
+}
+.clear:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/*相当于一个窗口，overflow hidden很重要，隐藏多余的图*/
+.container{
+    height:100%;
+    width:100%;
+    overflow: hidden;
+    position: relative;
+}
+.wrap{
+    /*父容器的3倍大小*/
+    width:300%;
+    height:100%;
+    /*绝对定位：因为要控制其left位置*/
+    position: absolute;
+    left:0;
+}
+
+/*每个图片占三分之一，最后一个33.4防止出现空隙*/
+.bg1{
+    float:left;
+    width:33.3%;
+    height:100%;
+    background: url('./images/QixiA.png') center center no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.bg2{
+    float:left;
+    width:33.3%;
+    height:100%;
+    background: url('./images/QixiB-bright.png') center center no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.bg3{
+    float:left;
+    width:33.4%;
+    height:100%;
+    background: url('./images/QixiC.png')  center center no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.boy{
+    width:151px;
+    height:291px;
+    position: absolute;
+    left:15%;
+    top:60%;
+    background-image: url(./images/origin/person/boy-walk.png);
+    /*这里的step-start是一帧一帧的改变，不写就是平移变换*/
+    animation: walk 2s  infinite step-start;
+}
+.sun{
+    width:201px;
+    height:201px;
+    position: absolute;
+    top:2%;
+    left:50%;
+    background: url('./images/sun.png');
+    animation: sunset 10s linear 1;
+}
+.cloud{
+    width:181px;
+    height:101px;
+    position: absolute;
+    left:4%;
+    top:2%;
+    background: url('./images/cloud1.png');
+    animation: cloud 25s ease infinite;
+}
+.door{
+    /*必须百分比，因为要自适应*/
+    width:12.4%;
+    height:23.3%;
+    /*开门关门动画才能体现出*/
+    overflow: hidden;
+    position: absolute;
+    left:52.3%;
+    top:48.1%;
+}
+.door_left{
+    width:50%;
+    height:100%;
+    left:0;
+    background: url('./images/door-left.png')  no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+}
+.door_right{
+    width:50%;
+    height:100%;
+    left:50%;
+    background: url('./images/door-right.png')  no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+}
+.flower{
+    width:41px;
+    height:41px;
+    position: absolute;
+}
+/*暂停动画*/
+.pauseWalk {
+    -webkit-animation-play-state: paused;
+    -moz-animation-play-state: paused;
+}
+
+/*走路动画效果实现，采用改变雪碧图的position，只用一张图*/
+@keyframes walk {
+    0% {
+        background-position: 0 0;
+    }
+    25%{
+        background-position: 151px 0;
+    }
+    50%{
+        background-position: 302px 0;
+    }
+    75%{
+        background-position: 453px 0;
+    }
+    100%{
+        background-position: 0 0;
+    }
+
+}
+
+/*太阳向西移动动画*/
+@keyframes sunset {
+    0% {
+        transform: translate(0,0);
+    }
+    100%{
+        transform: translate(-2000px,400px);
+    }
+}
+/*云朵移动动画*/
+@keyframes cloud {
+    0% {
+        left:4%
+    }
+    50%{
+        left:90%;
+    }
+    100%{
+        left:4%;
+    }
+}
+/*雪花旋转*/
+@keyframes snowRotate {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
