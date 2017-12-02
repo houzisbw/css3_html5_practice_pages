@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--移动端标签设置-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>响应式页面</title>
+    <link rel="stylesheet" href="test.css" type="text/css">
+</head>
+<body>
+<!--banner,clear很重要，否则li不会撑开banner部分-->
+<div class="banner clear">
+    <!--该元素被隐藏，用于模拟按钮点击-->
+    <input type="checkbox" id="menu">
+    <ul>
+        <li><a href="#">首页</a></li>
+        <li><a href="#">全球问题</a></li>
+        <li><a href="#">解决方案</a></li>
+        <li><a href="#">联系我们</a></li>
+    </ul>
+    <!--手机屏幕上的汉堡按钮，点击显示上面的banner内容，此元素是显示的-->
+    <label for="menu" id="menu-label"><img src="./images/menu.png"></label>
+</div>
+<!--content-->
+<div class="container">
+    <!--左右定宽，中间自适应-->
+    <div class="left">
+        sdddddddddddddddddddddddddddddddddddddddddd
+        sdddddddddddddddddddddddddddddddddddddddddd
+        sdddddddddddddddddddddddddddddddddddddddddd
+    </div>
+    <div class="right">
+        sdddddddddddddddddddddddddddddddddddddddddd
+    </div>
+    <div class="mid">
+        sdddddddddddddddddddddddddddddddddddddddddd
+    </div>
+</div>
+
+<script src="./jquery.min.js" type="text/javascript"></script>
+<script src="./test.js"></script>
+</body>
+</html>

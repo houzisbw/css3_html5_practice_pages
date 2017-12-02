@@ -1,0 +1,131 @@
+*{
+    margin:0;
+    padding:0;
+}
+.clear{
+    zoom:1;
+}
+/*重要，设置上一级的宽高，不会出现滚动条*/
+html,body{
+    height:100%;
+    width:100%;
+}
+body{
+    background-color: #eee;
+    min-width: 300px;
+}
+.clear:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.banner{
+    min-height:80px;
+    padding-left: 20px;
+    background-color: #62c39b;
+}
+.banner ul li{
+    float:left;
+    list-style:none;
+    line-height: 60px;
+    text-align: center;
+}
+.banner ul li:hover{
+    background-color: dodgerblue;
+}
+.banner ul li a{
+    padding:10px 50px;
+    height:60px;
+    text-decoration: none;
+    color:#fff;
+    /*让a标签可以设置宽高*/
+    display: inline-block;
+}
+.container{
+    width:100%;
+    height:calc(100% - 80px);
+}
+.left{
+    float:left;
+    width:300px;
+    background-color: orangered;
+    height:100%;
+    word-wrap: break-word;
+    transition: all 0.5s;
+}
+.right{
+    float:right;
+    width:300px;
+    background-color: red;
+    height:100%;
+    word-wrap: break-word;
+    transition: all 0.5s;
+}
+.mid{
+    margin: 0 300px;
+    background-color: blue;
+    height:100%;
+    word-wrap: break-word;
+    transition: all 0.5s;
+}
+/*汉堡按钮和input隐藏*/
+input[type='checkbox']{
+    display: none;
+}
+/*如果input为checked状态则显示ul，这一招不用写js，也可以达到按钮的效果,因为单选按钮相当于一个按钮*/
+input[type='checkbox']:checked + ul{
+    display: block;
+}
+
+label{
+    display: none;
+}
+#menu-label{
+    position: absolute;
+    left:10px;
+    top:20px;
+    width: 30px;
+    height:30px;
+}
+
+
+/*媒体查询,max-width由大到小书写,min-width由小到大,否则出错*/
+/*小于等于1024px宽度的时候 */
+@media (max-width: 1024px) {
+    .left,.right{
+        width:200px;
+    }
+    .mid{
+        margin: 0 200px;
+    }
+
+}
+
+/*小于等于640px宽度的时候*/
+@media (max-width:660px){
+    /*设置li宽度为100%*/
+    .banner ul li{
+        width:100%;
+    }
+    /*隐藏整个ul*/
+    .banner ul{
+        display: none;
+    }
+    .banner{
+        height:auto;
+        padding-left: 0;
+    }
+    /*中间3栏变为竖直排列*/
+    .left,.right,.mid{
+        width:100%;
+        min-height:400px;
+        margin:0;
+        /*重要，原先是浮动，现在变为不浮动，否则某些div会被遮住*/
+        float:none;
+    }
+    label{
+        display: block;
+    }
+
+}
+
