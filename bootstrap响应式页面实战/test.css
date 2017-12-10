@@ -1,0 +1,206 @@
+*{
+    margin:0;
+    padding:0;
+}
+.clear{
+    zoom:1;
+}
+/*重要，设置上一级的宽高，不会出现滚动条*/
+html,body{
+    height:100%;
+}
+
+.clear:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+body{
+    font-family: "Microsoft YaHei";
+}
+.header-top{
+    padding:0.8em;
+    background-color: #5fa022;
+}
+.navbar-default{
+    padding:1.5em;
+    box-shadow: 12px -5px 39px -12px;
+}
+.navbar-brand > img{
+    height:auto;
+    margin-top: 5px;
+}
+.navbar-brand{
+    padding:0 0 ;
+}
+.navbar-default .navbar-nav>li a{
+    top:10px;
+    padding:0.5em 3em;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.2em;
+    color:#919191;
+}
+.navbar-right a {
+    text-decoration: none;
+}
+
+.navbar-default .navbar-nav>li a:hover,
+.navbar-default .navbar-nav>li a:focus
+{
+    background-color: #D96B66;
+    color:#fff;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+}
+@media (max-width:970px) {
+    .navbar-default .navbar-nav>li a{
+        font-size: 0.8em;
+    }
+}
+
+/*搜索*/
+.search{
+    background-image: url('./images/banner.jpg');
+    background-size: cover;
+    -webkit-background-size: cover;
+    min-height:600px;
+    margin-top: -20px;
+}
+/*注意bootstrap的box都是border-box,所以设置padding是不会增大width*/
+.reservation{
+    background-color: rgba(255,255,255,0.7);
+    padding:60px;
+    margin: 0 auto;
+    width:50%;
+    margin-top:15%;
+    font-weight:500;
+    color:#f2f0f1;
+    font-size:1.2em;
+    outline:none;
+}
+/*修改btn默认样式*/
+.btn{
+    width:50%;
+    background: #D96B66;
+    color:#fff;
+    padding:5px;
+    border:none;
+    border-radius: 4px;
+}
+.search-btn{
+    text-align: center;
+    margin: 0 auto;
+}
+@media (max-width:768px){
+    .reservation{
+        padding:20px;
+        width:90%;
+    }
+}
+
+.hot{
+    padding: 3em;
+
+}
+
+.hot h3{
+    color:#1A1A1A;
+    font-size: 1.5em;
+    font-weight: 600;
+    margin: -20px 0 1em;
+    padding:0 0 0.5em;
+    border-bottom: 2px solid #eee;
+}
+.hot p{
+    margin-top: 1em;
+    color:#5fa022;
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 1.8em;
+}
+.add-cart{
+    width:100%;
+    padding:10px 18px;
+    background-color: #D96B66;
+    color:#fff;
+    border-radius: 5px;
+    outline:none;
+    border: none;
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 1em;
+    transition:  all 0.5s;
+    -webkit-transition: all 0.5s;
+    display: inline-block;
+}
+.hot a {
+    text-decoration: none;
+    color:#fff;
+}
+.add-cart:hover{
+    background-color: #5fa022;
+}
+.hot h6{
+    color:#D96B66;
+    font-size: 1.5em;
+    font-weight: 400;
+    margin-top: 0.3em;
+}
+.hot-commodity{
+    margin-bottom: 3em;
+}
+.choose{
+    border:1px solid silver;
+}
+.choose .navbar-brand img{
+    width:250px;
+    height:auto;
+    margin: 5px 5px 0 0 ;
+}
+.nav-pills>li>a{
+    color:#8e908d;
+}
+.nav-pills>li.active>a,
+.nav-pills>li.active>a:focus,
+.nav-pills>li.active>a:hover
+{
+    color:#fff;
+    background-color: #5fa022;
+}
+.tab-ul{
+    margin-right: 0;
+}
+.product-item{
+    text-align: center;
+}
+.pic{
+    margin:0 auto;
+    width:800px;
+    padding:20px;
+}
+.pic img{
+    width:100px;
+    height:100px;
+}
+/*小于等于992px则执行下列代码*/
+@media (max-width: 992px){
+    .pic{
+        width:415px;
+    }
+}
+.footer-left{
+    float:left;
+}
+.footer-right{
+    float:right;
+}
+footer{
+    padding:1em;
+    background-color: #D96B66;
+}
+footer p{
+    margin: 0;
+    color:#fff;
+}
+
